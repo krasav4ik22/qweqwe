@@ -1,0 +1,37 @@
+id: my-first-nuclei-template
+ 
+info:
+  name: My First Nuclei Template
+  author: yourname
+  severity: medium
+ 
+http:
+  - raw:
+    - |
+      GET /product?productId={{fuzz}} HTTP/2
+      Host: 0a0d004203953b0481f402b4008900e7.web-security-academy.net
+      Cookie: session=9fkgDbqzkaJZcRtsaa4DDnK2yCKSTroI
+      Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+      Sec-Ch-Ua-Mobile: ?0
+      Sec-Ch-Ua-Platform: "Windows"
+      Upgrade-Insecure-Requests: 1
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
+      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+      Sec-Fetch-Site: same-origin
+      Sec-Fetch-Mode: navigate
+      Sec-Fetch-User: ?1
+      Sec-Fetch-Dest: document
+      Referer: https://0a0d004203953b0481f402b4008900e7.web-security-academy.net/
+      Accept-Encoding: gzip, deflate, br
+      Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+      Priority: u=0, i
+
+    payloads:
+      fuzz:
+       - 1
+    attack: batteringram 
+
+    matchers:
+      - type: status
+        status:
+          - 200

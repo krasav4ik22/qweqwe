@@ -1,0 +1,43 @@
+id: my-first-nuclei-template
+
+info:
+  name: My First Nuclei Template
+  author: yourname
+  severity: medium
+ 
+http:
+  - raw:
+    - |
+      GET /sqli_1.php?title={{fuzz}}&action=search HTTP/2
+      Host: bwapp.hakhub.net
+      Cookie: PHPSESSID=hvubltifilbbo6qhkqk4epe084; security_level=0
+      Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+      Sec-Ch-Ua-Mobile: ?0
+      Sec-Ch-Ua-Platform: "Windows"
+      Upgrade-Insecure-Requests: 1
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
+      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+      Sec-Fetch-Site: same-origin
+      Sec-Fetch-Mode: navigate
+      Sec-Fetch-User: ?1
+      Sec-Fetch-Dest: document
+      Referer: https://bwapp.hakhub.net/sqli_1.php?title=qwe&action=search
+      Accept-Encoding: gzip, deflate, br
+      Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+      Priority: u=0, i
+
+
+
+
+      
+    payloads:
+      fuzz: C:\Users\Alex\Desktop\templates\sql_mysql_output.txt
+    attack: batteringram 
+
+    matchers:
+      - type: dsl
+        dsl:
+          - 'duration>=4'
+          
+          
+          
